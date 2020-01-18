@@ -1,0 +1,305 @@
+body{
+    z-index: 997;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg.jpg) top center;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    background-attachment: fixed;
+}
+header::before{
+    content: "";
+    background: rgba(13, 14, 19, 0.2);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.message{
+    display: none;
+}
+/******************************** Social Links *********************************/
+.social_links{
+    position: fixed; 
+    height: 100vh;
+    border-right: 1px solid #fff;
+}
+.social_links ul{
+    position: relative; 
+    top: 450px;
+}
+.social_links ul li{
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.social_links ul li i{
+    color: #fff;
+    font-size: 19px;
+    padding: 9px;
+    border: 1px solid #fff;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+}
+/******************************** END Social Links *********************************/
+/******************************** START Navbar *********************************/
+.navbar{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.navbar-brand img{
+    height: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.nav-link{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 25px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #eee;
+    font-size: 16px;
+}
+/******************************** END Navbar *********************************/
+/******************************** START Header Image *********************************/
+.header_logo img{
+    height: 230px;
+    margin-top: 40px;
+    margin-left: 130px;
+}
+.header_logo p{
+    margin-left: 215px;
+    font-size: 21px;
+    color: #C2C2C2;
+    letter-spacing: 0.54em;
+    font-weight: bold;
+}
+/******************************** END Header Image *********************************/
+.owl-item img{
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 120px;
+}
+.center img{
+    margin-top: 0;
+    height: 140px;
+}
+.center .overlay:before{
+    background-color: transparent;
+}
+.overlay:before{
+    position: absolute;
+    content:" ";
+    border-radius: 10px;
+    top:0;
+    margin-top: 10px;
+    left:0;
+    width:100%;
+    height: 120px;
+    display: block;
+    z-index:0;
+    background-color: rgba(27, 27, 27, 0.63);
+}
+.owl-prev,
+.owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    color: #fff;
+    font-size: 35px;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.owl-prev {
+  left: -2rem;
+}
+
+.owl-next {
+  right: -2rem;
+}
+.slider{
+    margin-left: 100px;
+    margin-top: 40px;
+}
+/***************************************************************************/
+.watch_button{
+    position: relative;
+    top: 550px;
+    left: 340px;
+}
+.watch_button h1{
+    color: #fff;
+    font-size: 34px;
+    position: fixed;
+    margin-left: 7px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 500;
+    display: initial;
+}
+.watch_button a i{
+    color:#fff;
+    padding: 9px;
+    border: 2px solid rgb(190, 12, 12);
+    border-radius:50%;
+    font-size: 15px;
+}
+.watch_button a i:hover{
+    color: rgb(190, 12, 12);
+    border-color: #fff;
+}
+/******************************************************/
+@media only screen and (max-width: 40em) and (min-width: 40.063em) and (max-width: 70em) { 
+    .navbar-nav{
+        display: contents;
+    }
+    .navbar{
+        width: 70%;
+        margin-left: 140px;
+    }
+    .navbar-brand img{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .nav-link{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 25px;
+    }
+    .header_logo img{
+        margin-left: 140px;
+    }
+    .header_logo p{
+        margin-left: 215px;
+    }
+    .slider{
+        margin-left: 170px;
+        margin-top: 40px;
+    }
+    .watch_button {
+        bottom: 580px;
+        left: 0px;
+    }
+    .watch_button a{
+        padding: 22px;
+    }
+    .watch_button h1{
+        display: none;
+    }
+}
+@media screen  and (orientation:portrait)  {
+    header{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        background: rgb(14, 30, 37);
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .social_links{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .header_logo{
+        display: none;
+    }
+    .owl-carousel, .owl-carousel.owl-loaded {
+        display: none;
+    }
+    .watch_button{
+        display: none;
+    }
+    .message{
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 95%;
+    }
+    .message h1{
+        margin: 0;
+        font-size: 28px;
+        text-align: center;
+    }
+    .message .body p{
+        margin: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .card{
+        padding: 20px;
+    }
+}
+@media (min-width:481px) and (max-width: 1023px) and (orientation: landscape) { 
+    header{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        background: rgb(14, 30, 37);
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .social_links{
+        display: none;
+    }
+    .navbar{
+        display: none;
+    }
+    .header_logo{
+        display: none;
+    }
+    .owl-carousel, .owl-carousel.owl-loaded {
+        display: none;
+    }
+    .watch_button{
+        display: none;
+    }
+    .message{
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 95%;
+    }
+    .message h1{
+        margin: 0;
+        font-size: 28px;
+        text-align: center;
+    }
+    .message .body p{
+        margin: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .card{
+        padding: 20px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1125px){
+    .watch_button {
+        left: 240px;
+    }
+    .header_logo img {
+        margin-left: 40px;
+    }
+    .header_logo p {
+        margin-left: 130px;
+        font-size: 19px;
+        letter-spacing: 0.46em;
+    }
+    .navbar {
+        margin-left: 10px;
+    }
+}
